@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pass Vault - Register</title>
+<link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="logo.png" alt="PASS VAULT Logo" class="logo">
+        </div>
+        <div class="login-form">
+            <h2>Register</h2>
+            <form action="/register" method="post">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+				 <div class="input-group">
+                    <input type="password" id="masterpassword" name="masterpassword" placeholder="Master Password" required>
+                </div>
+                <button type="submit" class="register-button">Register</button>
+            </form> 
+        </div>
+    </div>
+</body>
+</html>

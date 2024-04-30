@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Vault - Password Manager</title>
+    <link rel="stylesheet" href="css/passManager.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="account-dropdown">
+                <button class="account-btn" aria-haspopup="true" aria-expanded="false" aria-label="Account settings">
+                    <img src="User.png" alt="" class="user-icon">
+                </button>
+                <div class="dropdown-content" aria-hidden="true">
+                    <button id="settingsButton"><b>Settings</b></button>
+                    <b><a href="/logout">Log Out</a></b>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search passwords..." aria-label="Search passwords">
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">Passwords</a>
+
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="content-header">
+                <h1>Title <span id="sort-arrow">&#9656;</span></h1>
+                <button class="add-item-button">Add Password</button>
+            </header>
+            
+            <div class="items-list"></div>
+                
+            
+            <div id="addItemModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 class="modal-title">Add Password</h2>
+                    <form id="addItemForm">
+                        <input type="text" id="title" name="title" placeholder="Title" required>
+                        <input type="text" id="website" name="website" placeholder="Website" required>
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <button type="submit"><b>Submit</b></button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="editItemModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="document.getElementById('editItemModal').style.display='none'">&times;</span>
+                    <h2 class="modal-title">Edit Password</h2>
+                    <form id="editItemForm">
+                        <input type="text" id="edit-title" name="title" placeholder="Title" required>
+                        <input type="text" id="edit-website" name="website" placeholder="Website" required>
+                        <input type="text" id="edit-username" name="username" placeholder="Username" required>
+                        <div class="test">
+                            <input type="password" id="edit-password" class="password-input" name="password" placeholder="Password" required>
+                            <span class="eye-icon" onclick="togglePasswordVisibility()">&#128065;</span>
+                        </div>
+                        <button type="submit">Update</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="settingsPopup" class="settings-popup">
+                <div class="settings-popup-content">
+                    <span class="settings-popup-close">&times;</span>
+                    <h2 class="settings-popup-title">Settings</h2>
+                    <div class="settings-popup-item centered">
+                        <div class="settings-popup-label"><h2>Email</h2></div>
+                        <div class="settings-popup-value">Email@gmail.com</div>
+                    </div>
+                    <div class="settings-popup-item">
+                        <button id="changeEmailBtn" class="settings-popup-button small-button">Change Email</button>
+                    </div>
+                    <div id="authSection" class="auth-section" style="display: none;">
+                        <h2 class="settings-popup-title">Authentication</h2>
+                        <input type="text" id="authCode" placeholder="Enter Code" class="auth-input">
+                        <button id="verifyCodeBtn" class="settings-popup-button small-button">Verify Code</button>
+                    </div>
+                    <div class="settings-popup-item" style="justify-content: flex-start;">
+                        <div class="settings-popup-label">Password</div>
+                        <button id="changePasswordBtn" button class="settings-popup-button small-button">Change Password</button>
+                    </div>
+                    <div id="authSectionPassword" class="auth-section" style="display: none;">
+                        <h2 class="settings-popup-title">Authentication</h2>
+                        <input type="text" id="authCodePassword" placeholder="Enter Code" class="auth-input">
+                        <button id="verifyCodeBtnPassword" class="settings-popup-button small-button">Verify Code</button>
+                    </div>
+                    
+
+                </div>
+            </div>
+            
+        </main>
+    <script src="manager.js"></script>
+</body>
+</html>

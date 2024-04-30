@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pass Vault - 2 Factor Authentication</title>
+<link rel="stylesheet" href="css/twoFactor.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="logo.png" alt="PASS VAULT Logo" class="logo">
+        </div>
+        <div class="master-pass-form">
+            <h2>2 Factor Authentication</h2>
+            <form action="/verify-two-factor" method="POST">
+                <div class="input-group">
+                    <input type="text" id="TwoFactor" name="TwoFactor" required>
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="sign-in-button">Authenticate</button>
+                </div>
+            </form>
+        </div>
+        <b>We sent you an email with your 2 factor authenication code.</b>
+        <div id="errorMessage" style="color: red; display: none;"></div>
+    </div>
+    <script src="2FA.js"></script>
+</body>
+</html>
