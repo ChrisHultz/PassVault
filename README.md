@@ -13,4 +13,11 @@ You can create a free server at https://www.mongodb.com and you can get your ser
 
 I used GMail to do this. You will need to generate a specific password to allow the application to login.
 
+------------------------------------------
+
+Afterward, you'll want to install the libraries used.
+Crypto, express, express-session, mongoose, path, nodemailer
+
+I might be missing one or two, but...
+
 After you've done all these steps, you should be able to run this on your own!
