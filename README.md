@@ -30,3 +30,12 @@ Afterward, you'll want to install the libraries used.
 I might be missing one or two, but...
 
 After you've done all these steps, you should be able to run this on your own!
+
+References:
+https://gist.github.com/vlucas/2bd40f62d20c1d49237a109d491974eb?permalink_comment_id=2964151 -- very good for node.js and encryption!!
+https://www.geeksforgeeks.org/node-js-cipher-final-method/?ref=lbp (Node.js Crypto Modules)
+https://www.w3schools.com/nodejs/nodejs_email.asp (Sending an email)
+https://www.tutorialspoint.com/expressjs/expressjs_sessions.htm 
+https://www.youtube.com/watch?v=J1qXK66k1y4&ab_channel=FullStackZach
+https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png (User Icon)
+https://acte.ltd/utils/randomkeygen (Generating a random key)
