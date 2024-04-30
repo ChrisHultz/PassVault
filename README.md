@@ -1,5 +1,7 @@
 To get this working, you'll want to do a few things.
 
+Open the .env file
+
 1: Create your own Secrey Key
 Using this link, you'll want to copy the randomly generated key from this site under "Encryption Key 256"
 https://acte.ltd/utils/randomkeygen
